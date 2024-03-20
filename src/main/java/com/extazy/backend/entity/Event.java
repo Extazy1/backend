@@ -20,12 +20,23 @@ public class Event {
         @JsonProperty("DisciplineList")
         private List<Discipline> disciplineList;
 
+        @JsonProperty("Code")
+        private String code;
+
         public List<Discipline> getDisciplineList() {
             return disciplineList;
         }
 
         public void setDisciplineList(List<Discipline> DisciplineList) {
             this.disciplineList = DisciplineList;
+        }
+
+        public String getCode() {
+            return code;
+        }
+
+        public void setCode(String code) {
+            this.code = code;
         }
     }
 

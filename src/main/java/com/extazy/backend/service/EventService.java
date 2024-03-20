@@ -41,7 +41,7 @@ public class EventService {
         for (Event event : events) {
             for (Event.Sport sport : event.getSports()) {
                 for (Event.Discipline discipline : sport.getDisciplineList()) {
-                    disciplineInfos.add(new DisciplineInfo(discipline.getId(), discipline.getDisciplineName()));
+                    disciplineInfos.add(new DisciplineInfo(discipline.getId(), discipline.getDisciplineName(), sport.getCode()));
                 }
             }
         }
