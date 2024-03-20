@@ -2,8 +2,6 @@ package com.extazy.backend.service;
 
 import com.extazy.backend.entity.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -53,6 +51,7 @@ public class ResultService {
             String json = response.getBody();
 
             Class<?> resultClass = resultTypeMap.get(disciplineCode.toLowerCase());
+            //System.out.println(resultClass.getName());
             if (resultClass == null) {
                 System.out.println("Unsupported discipline code: " + disciplineCode);
                 return new ArrayList<>();
